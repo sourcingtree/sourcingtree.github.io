@@ -131,8 +131,8 @@
                 price: "Free"
             },
             {
-                name: "CleanView - 광고없이 계속읽기",
-                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/04/71/33/047133c0-8b13-e5fb-0424-d2e3efe3e4fc/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg",
+                name: "광고없이 계속읽기",
+                icon: "icons/cleanview.png",
                 url: "https://apps.apple.com/kr/app/id6760983916",
                 genre: "Utilities",
                 desc: "웹 콘텐츠를 광고 없이 깔끔하게 읽을 수 있는 브라우저",
@@ -168,21 +168,12 @@
                 url: "https://apps.apple.com/kr/app/id1234443708",
                 genre: "Lifestyle / Business",
                 desc: "투넘버 서비스 전용 문자 발송 앱",
-                price: "\\u20a91,100"
-            },
-            {
-                name: "MO:D",
-                icon: "",
-                url: "https://apps.apple.com/kr/app/id6738895304",
-                genre: "Lifestyle",
-                desc: "",
-                price: "Free"
+                price: "\u20a91,100"
             }
         ];
 
         const grid = document.getElementById('apps');
         apps.forEach(app => {
-            if (!app.icon) return;
             const a = document.createElement('a');
             a.className = 'app-card';
             a.href = app.url;
