@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourcingtree - Apps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            min-height: 100vh;
+        }
+        header {
+            background: #fff;
+            border-bottom: 1px solid #d2d2d7;
+            padding: 32px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            margin-top: 8px;
+            font-size: 15px;
+            color: #86868b;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 20px;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .app-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s;
+            border: 1px solid #e8e8ed;
+        }
+        .app-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            flex-shrink: 0;
+        }
+        .app-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        .app-info .genre {
+            font-size: 12px;
+            color: #86868b;
+            margin-top: 4px;
+        }
+        .app-info .desc {
+            font-size: 13px;
+            color: #6e6e73;
+            margin-top: 8px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .app-info .price {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0071e3;
+            background: #f0f5ff;
+            padding: 2px 10px;
+            border-radius: 12px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 13px;
+            color: #86868b;
+        }
+        footer a { color: #0071e3; text-decoration: none; }
+        @media (max-width: 640px) {
+            .app-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sourcingtree</h1>
+        <p>remain.corp</p>
+    </header>
+    <div class="container">
+        <div class="app-grid" id="apps"></div>
+    </div>
+    <footer>
+        <p><a href="mailto:sourcingtree.cs@gmail.com">sourcingtree.cs@gmail.com</a></p>
+    </footer>
+    <script>
+        const apps = [
+            {
+                name: "K-Pop Tube",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/e5/12/bfe51205-58c2-ca9e-3845-cee35152bc82/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+                url: "https://apps.apple.com/kr/app/k-pop-tube/id1546058877",
+                genre: "Music / Lifestyle",
+                desc: "K-pop 음악을 무료로 감상할 수 있는 스트리밍 앱",
+                price: "Free"
+            },
+            {
+                name: "Feather",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cc/b5/f7/ccb5f7a5-1cc1-dde0-d418-de03b2464b41/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+                url: "https://apps.apple.com/kr/app/feather/id6758260584",
+                genre: "Lifestyle / Productivity",
+                desc: "기프티콘, 메모, 링크, 연락처를 한 곳에서 관리하는 스마트 보관함",
+                price: "Free"
+            },
+            {
+                name: "CleanView - 광고없이 계속읽기",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/04/71/33/047133c0-8b13-e5fb-0424-d2e3efe3e4fc/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg",
+                url: "https://apps.apple.com/kr/app/id6760983916",
+                genre: "Utilities",
+                desc: "웹 콘텐츠를 광고 없이 깔끔하게 읽을 수 있는 브라우저",
+                price: "Free"
+            },
+            {
+                name: "070 스팸패턴차단",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d3/4f/19/d34f1992-4c41-dd8a-1ad9-b94d9b36e1e1/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg",
+                url: "https://apps.apple.com/kr/app/070-spam-pattern-block/id1556764083",
+                genre: "Lifestyle / Utilities",
+                desc: "070, 080, 1588 등의 번호를 범위로 지정하여 스팸차단",
+                price: "Free"
+            },
+            {
+                name: "임시노트",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ea/57/e4/ea57e414-324d-ca9c-e86c-c3bff624e14b/AppIcon-0-0-1x_U007ephone-0-85-220.png/100x100bb.jpg",
+                url: "https://apps.apple.com/kr/app/temp-note/id1659400014",
+                genre: "Lifestyle / Productivity",
+                desc: "사진첩을 어지럽히지 않는 임시 메모 관리 앱",
+                price: "Free"
+            },
+            {
+                name: "점검인",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/35/f6/2235f653-56a1-87bb-fcff-241927ca1a8d/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.jpg",
+                url: "https://apps.apple.com/kr/app/id6475960901",
+                genre: "Business / Utilities",
+                desc: "QR코드 기반의 스마트 시설물 점검 관리 시스템",
+                price: "Free"
+            },
+            {
+                name: "투넘버 문자",
+                icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/3e/26/79/3e2679d7-57e8-b635-6800-9c7688ddc472/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg",
+                url: "https://apps.apple.com/kr/app/id1234443708",
+                genre: "Lifestyle / Business",
+                desc: "투넘버 서비스 전용 문자 발송 앱",
+                price: "\\u20a91,100"
+            },
+            {
+                name: "MO:D",
+                icon: "",
+                url: "https://apps.apple.com/kr/app/id6738895304",
+                genre: "Lifestyle",
+                desc: "",
+                price: "Free"
+            }
+        ];
+
+        const grid = document.getElementById('apps');
+        apps.forEach(app => {
+            if (!app.icon) return;
+            const a = document.createElement('a');
+            a.className = 'app-card';
+            a.href = app.url;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.innerHTML = `
+                <img class="app-icon" src="${app.icon}" alt="${app.name}" loading="lazy">
+                <div class="app-info">
+                    <h3>${app.name}</h3>
+                    <div class="genre">${app.genre}</div>
+                    ${app.desc ? `<div class="desc">${app.desc}</div>` : ''}
+                    <span class="price">${app.price}</span>
+                </div>
+            `;
+            grid.appendChild(a);
+        });
+    </script>
+</body>
+</html>
