@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account & Data Deletion - Sourcingtree</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.8;
+            padding: 24px 20px 60px;
+            max-width: 720px;
+            margin: 0 auto;
+            word-break: keep-all;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eee;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            color: #222;
+        }
+        p { margin-bottom: 8px; font-size: 14px; color: #444; }
+        b, strong { font-weight: 600; color: #222; }
+        ul, ol { padding-left: 20px; margin-bottom: 8px; }
+        li { font-size: 14px; color: #444; margin-bottom: 6px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 13.5px;
+        }
+        th, td {
+            border: 1px solid #e5e5e5;
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+            color: #444;
+        }
+        th { background: #fafafa; font-weight: 600; color: #222; }
+        .note {
+            background: #f7f8fa;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 12px 0;
+            font-size: 13.5px;
+            color: #444;
+        }
+        .mail {
+            display: inline-block;
+            background: #2563eb;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+        a { color: #2563eb; }
+    </style>
+</head>
+<body>
+    <h1>Account &amp; Data Deletion</h1>
+
+    <p>This page explains how to delete the account created by SourcingTree apps and the data stored with it.</p>
+
+    <h2>When is an account created?</h2>
+    <p>There is no sign-up in our apps. We never ask for your name, email address, or phone number.</p>
+    <p>However, <b>to manage the free trial</b>, an anonymous account is created automatically the first time you
+       launch the app, derived from a one-way hash of your device identifier. That account holds nothing but the
+       time your trial started, and the value alone cannot identify you.</p>
+
+    <h2>Option 1 &middot; Uninstall the app (data on your device)</h2>
+    <p>Uninstalling removes the following from your device. No request is needed.</p>
+    <ul>
+        <li>Connected vehicles and their nicknames</li>
+        <li>Auto-lock settings and Bluetooth device settings</li>
+        <li>Activity history (lock requests and their results)</li>
+    </ul>
+    <div class="note">
+        Uninstalling does <b>not</b> remove the <b>anonymous account</b> described above, because it is kept so that
+        your remaining trial period carries over if you reinstall. Use Option 2 to delete it.
+    </div>
+
+    <h2>Option 2 &middot; Request account deletion</h2>
+    <p>Email us and we will delete the anonymous account and any data held on our side.</p>
+
+    <p>
+        <a class="mail" href="mailto:sourcingtree.cs@gmail.com?subject=%5BAccount%20Deletion%20Request%5D&amp;body=App%20name%3A%20%0AReason%20(optional)%3A%20%0A">
+            Send a deletion request
+        </a>
+    </p>
+
+    <p>Including the following helps us process it faster.</p>
+    <ul>
+        <li>The name of the app you use</li>
+        <li>The device information shown at the bottom of the app&rsquo;s More screen, if available</li>
+    </ul>
+    <p>We complete the request and reply within <b>10 days</b>.</p>
+
+    <h2>What is deleted and what is kept</h2>
+    <table>
+        <tr><th style="width:34%">Item</th><th style="width:22%">Action</th><th style="width:44%">Notes</th></tr>
+        <tr><td>Anonymous account and device identifier hash</td><td>Deleted immediately</td><td>Cannot be recovered.</td></tr>
+        <tr><td>Free trial record</td><td>Deleted immediately</td><td>After deletion, reinstalling may start a new trial.</td></tr>
+        <tr><td>Vehicles, settings and activity history on the device</td><td>Removed when you uninstall</td><td>This data is never sent to us.</td></tr>
+        <tr><td>Crash data (Crashlytics)</td><td>Deleted automatically 90 days after collection</td><td>Held in a form that does not identify you.</td></tr>
+        <tr><td>Purchase and subscription records</td><td>Retained by Google Play</td><td>Google keeps these as required by law. Cancel a subscription from Google Play.</td></tr>
+    </table>
+
+    <h2>If you have an active subscription</h2>
+    <p>Deleting the account does not cancel your Google Play subscription. Please cancel it first at
+       <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">Google Play subscriptions</a>.</p>
+
+    <h2>Contact</h2>
+    <p>Email: sourcingtree.cs@gmail.com</p>
+    <p>See also: <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a></p>
+
+    <p style="margin-top:24px">Last updated: 6 August 2026</p>
+</body>
+</html>
